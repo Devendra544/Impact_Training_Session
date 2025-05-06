@@ -31,9 +31,36 @@ static int fib(int n){
 return fib(n-1)+fib(n-2);
 
 }
-
-
 }
+------------------------------------------
+** Find the HCF Of a Number using Recursion.
+
+class Demo
+{
+  int hcf(int a,int b)
+   {
+   if(b==0)
+      {
+      return a;
+      }
+   else
+      {
+      return hcf(b,a%b);
+      }
+   }
+}
+class Main{
+public static void main(String args[])
+{
+        int num1 = 48;
+        int num2 = 18;
+        int hcf = findHCF(num1, num2);
+        System.out.println("The HCF of " + num1 + " and " + num2 + " is: " + hcf);
+    
+}
+}
+
+
 
 
 
