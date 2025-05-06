@@ -1,0 +1,117 @@
+OOPS:
+=>Constructor Calling:
+//Constructor: It is a Special Methodin the class , that Intializes the state of an Object.
+// Simply, Constructor: Constructor means Initialization of Object.
+
+Intialization means you are calling the default constructor it create objects.
+//when we call the constructor of child class , it atomatically cass the Parent Constructor:
+
+ex: 
+
+class Animal{
+  Animal(){
+    System.out.println("Animal Constructor);
+  }
+}
+class Dog{
+  Dog(){
+    System.out.println("Dog Constructor);
+  }
+}
+  class Main
+       {
+          public static void main(String args[])
+          {
+              new Dog();
+      
+          }
+    
+       }
+
+    //when we call the constructor of child class , it atomatically cass the Parent Constructor: so,
+                       the output will be:
+
+                       Animal Constructor.
+                       Dog Constructor.
+-------------------------------------------------------------
+=>Method Calling:
+
+//When we call a method of a class, only that class method will get Execute , Super method Wont Execute.       
+                       
+class Animal{
+  static void eat(){
+    System.out.println("Animal is eating);
+  }
+}
+class Dog{
+  static vois eat(){
+    System.out.println("Dog is Eating);
+  }
+}
+  class Main
+       {
+          public static void main(String args[])
+          {
+               Animal.eat(); //outpu: Animal is Printing
+               Dog.eat();  //outpit: Dog is Printing
+      
+          }
+    
+       }   
+
+=>Here we are not creating objects of Animal or Dog , beacuse  those are static methods.
+=> we can call the static methods of a class Directly, beacuse , the method is static.
+ => Static means nothing but , it is a Class instance. not an Object instance.
+   -----------------------------------------
+=>Coditional Statements:
+                       
+It will the Check the Given Condition and it will print that Block.
+                       
+Types:
+* if
+        //In if , it check the condition , if it is correct then enter into the block and executes the Statements inside the Block.
+    Syntax: if(Condition)
+            {
+            //Statements.
+            }
+    Example:
+          //Find the Greatest Number.
+                       
+           if(a>b)
+            {
+            System.out.println("a is Greater");
+            }
+                       
+* if else
+          //In if else , it check the condition of if() block, if it is correct then enter into the if block and executes the Statements inside the Block. or 
+                       //if condtition not satisfies it will enter into Else block and it will print it.
+    Syntax: if(Condition)
+            {
+            //Statements.
+            } 
+             else
+               {
+                //Statements
+
+                }
+
+          Example:
+          //Find the Greatest Number.
+                       
+           if(a>b)
+            {
+            System.out.println("a is Greater");
+            }
+          else
+          {                
+          System.out.println("b is Greater");
+           }
+                       
+*if , else if,else(if else Lader)
+        // it is ued to check multiple conditions.
+                       
+*Switch 
+     // it is also used to check multiple Conditions based on cases.It is most useful when we have multiple Conditions.
+                       
+-----------------------------------------------------
+                       
