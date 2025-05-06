@@ -114,4 +114,52 @@ Types:
      // it is also used to check multiple Conditions based on cases.It is most useful when we have multiple Conditions.
                        
 -----------------------------------------------------
-                       
+  * Switch Case Example:  
+=> Write a program for Simple Calculator.
+
+import java.util.*;
+class Main
+{
+    public static void main(String args[])
+    {
+        Scanner sc=new Scanner(System.in);
+        System.out.println("Enter Number 1: ");
+        int num1=sc.nextInt();
+        
+        System.out.println("Enter Number2: ");
+        int num2=sc.nextInt();
+        
+        System.out.println("Enter an Operator: ");
+        String str=sc.next();
+        
+        char operator=str.charAt(0);
+        
+        switch(operator)
+        {
+            case '+':
+                System.out.println("Addtion is: "+(num1+num2));
+                break;
+            case '-':
+                System.out.println("Subtraction is: " + (num1-num2));
+                break;
+            case '*':
+                System.out.println("Multiplication is: " +(num1*num2));
+                break;
+            case '/':
+                System.out.println("Quotient is: " +(num1/num2));
+                break;
+            case '%':
+                System.out.println("Remainder is:"+ (num1%num2));
+                break;
+            default:
+               System.out.println("Not a Valid Operator");
+                
+        }
+        
+    }
+}
+
+// In the above code we have used next() and charAt() to to fetch the Operator, Beacuse we dont have a Scanner method to fetch a Char Individually.
+// So we have store the Operator in String using next() method and have fecht it using charAt() method.
+---------------------------------------------------------------------------
+
