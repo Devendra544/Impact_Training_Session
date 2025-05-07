@@ -1,0 +1,239 @@
+** Nested Loops.
+-----------------
+
+=> A loop inside a loop is called as Nested Loop.
+=> For every problem , there will be 3 types of Solutions:
+   * Brute Force
+   * Better
+   * Optimal
+
+=> Most of the Brute Solution will get using 2 loops and Most of solution is solved using 2 loops.
+=> Time complexity of Bruteforce is always n^2.
+
+ex:
+class Main {
+    public static void main(String[] args) {
+        int a=0;
+        int n=5;
+        for(int i=1;i<=n;i++)  //outer loop
+        {
+            for(int j=1;j<=n;j++) //inner Loop
+            {
+                a++;
+            }
+        }
+        System.out.println(a);
+    }
+}
+
+** Pattern Problems:
+------------------------
+
+=> ex: print the Sqaue
+* * * * *
+* * * * *
+* * * * *
+* * * * *
+* * * * *
+
+=>to get this , we need 5 rows and colums,
+  we need to print * in 5 colums and also in 4 rows so:
+
+//code: 
+
+class Main {
+    public static void main(String[] args) {
+        
+        int n=5;
+        for(int i=1;i<=n;i++)
+        {
+            for(int j=1;j<=n;j++)
+            {
+                System.out.print("* ");
+            }
+            System.out.println();
+        }
+        
+    }
+}
+
+--------------------------------------------------------------------------
+=>ex:
+* * * * * 
+*       * 
+*       * 
+*       * 
+* * * * * 
+
+=> here we are printing * when i=0 means first row,
+                          when i=n means last row,
+                          j=1 and j=n.
+  else give space.
+// ex: 
+  * * * * * 
+  *       * 
+  *       * 
+  *       * 
+  * * * * * 
+
+class Main {
+    public static void main(String[] args) {
+        
+        int n=5;
+        for(int i=1;i<=n;i++)
+        {
+            for(int j=1;j<=n;j++)
+            {
+                if(i==1 || i==n || j==1 || j==n)
+                {
+                    System.out.print("* ");
+                }
+               
+                else
+                {
+                    System.out.print("  ");
+                }
+            }
+            System.out.println();
+        }
+        
+    }
+}
+--------------------------------------------------------------
+=>ex:
+
+* * * * * 
+* *     * 
+*   *   * 
+*     * * 
+* * * * * 
+=> here extra are left diagonal means (i,j) values , just see when extra * printed : (1,1) ,(2,2). so on..
+
+class Main {
+    public static void main(String[] args) {
+        
+        int n=5;
+        for(int i=1;i<=n;i++)
+        {
+            for(int j=1;j<=n;j++)
+            {
+                if(i==1 || i==n || j==1 || j==n || i==j)
+                {
+                    System.out.print("* ");
+                }
+               
+                else
+                {
+                    System.out.print("  ");
+                }
+            }
+            System.out.println();
+        }
+        
+    }
+}
+
+---------------------------------------------------------------------------------
+ex: 
+* * * * * 
+* *   * * 
+*   *   * 
+* *   * * 
+* * * * * 
+=> here we have right diagonal the comman in right diagonal is just see: 1+5=6 start of diagonal
+                                                                         2+4=6
+                                                                         3+3=6 
+                                                                         4+2=6 
+                                                                         5+1=6
+=> so comman is i+j is 6.
+
+class Main {
+    public static void main(String[] args) {
+        
+        int n=5;
+        for(int i=1;i<=n;i++)
+        {
+            for(int j=1;j<=n;j++)
+            {
+                if(i==1 || i==n || j==1 || j==n || i==j || i+j==6)
+                {
+                    System.out.print("* ");
+                }
+               
+                else
+                {
+                    System.out.print("  ");
+                }
+            }
+            System.out.println();
+        }
+        
+    }
+}
+-------------------------------------------------------------------------------
+
+* 
+* * 
+* * * 
+* * * * 
+* * * * * 
+=> here we can observe that * in based on i,so if j is based on i means it will print.
+just condition :
+//  for(int i=1;i<=n;i++)
+        {
+            for(int j=1;j<=i;j++)
+                        ----
+            {
+             }
+        } 
+//code:
+
+class Main {
+    public static void main(String[] args) {
+        
+        int n=5;
+        for(int i=1;i<=n;i++)
+        {
+            for(int j=1;j<=i;j++)
+            {
+               System.out.print("* ");
+            }
+            System.out.println();
+        }
+        
+    }
+}
+---------------------------------------------------------------------------------------
+ex: 
+* 
+* * 
+*   * 
+*     * 
+* * * * * 
+
+// Online Java Compiler
+// Use this editor to write, compile and run your Java code online
+
+class Main {
+    public static void main(String[] args) {
+        
+        int n=5;
+        for(int i=1;i<=n;i++)
+        {
+            for(int j=1;j<=i;j++)
+            {
+               if(i==n || j==1 || i==j)
+               {
+                   System.out.print("* ");
+               }
+               else
+               {
+                   System.out.print("  ");
+               }
+            }
+            System.out.println();
+        }
+        
+    }
+}
+
