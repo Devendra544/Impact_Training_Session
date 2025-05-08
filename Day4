@@ -207,3 +207,155 @@ class Main
 //In place of writing this if else simply use ternary Operator: 
 
 String res=(n==5)?"yes":"no";
+----------------------------------------------------------------------------------------------------------
+
+patter: Hallow Sqare
+ * * * * *
+ *       *
+ *       *
+ *       *
+ * * * * *
+print this using ternary operator.
+=> we can observe i==1,j==1,i==n,j==5 print * else Space
+code:
+class Main
+{
+    public static void main(String args[])
+    {
+        int n=5;
+        for(int i=1;i<=n;i++)
+        {
+            for(int j=1;j<=n;j++)
+            {
+                System.out.print((i==1|| j==5 || j==1 || i==5)?" *":"  ");
+            }
+            System.out.println();
+        }
+    }
+}
+------------------------------------------------------------------------------------------------------------------------
+** for each loop:
+=>whenever we dont have length and whenever we dont have index values, we can use for each loop to get the elements.
+=>Mostly will use the for each loop in Collections.
+EG: list,set,map
+
+ex:
+class Main
+{
+    public static void main(String args[])
+    {
+        int arr[]={1,2,3,4,5};
+        for(int num :arr)
+        {
+            System.out.print(num+" ");
+        }
+    }
+}
+----------------------------------------------------------------------------------------------------------------------------------
+=>Print Pattern: 
+         *
+       * * *
+     * * * * *
+   * * * * * * *
+ * * * * * * * * *
+=> just like above code but i am just adding extra spaces.
+like for 1st element = 4
+        2nd element = 3, 3rd elemt=2 , 2nd element = 1 spaces means,
+        k=i;k<n;k++
+    here the space is occuring only based on i like i=1=>5, i=2=>3, i=3=>2...
+     
+class Main
+{
+    public static void main(String args[])
+    {
+       int n=5;
+       for(int i=1;i<=n;i++)
+       {
+           for(int j=i;j<n;j++)
+           {
+               System.out.print("  ");
+           }
+           for(int j=1;j<=(i*2-1);j++)
+           {
+              
+               System.out.print(" *");
+           }
+           System.out.println();
+       }
+    }
+}
+---------------------------------------------------------------------------------------------------------
+pattern:
+*******
+ *****
+  ***
+   *
+=>Just reverse of a previous problem.
+
+class Main
+{
+    public static void main(String args[])
+    {
+       int n=5;
+       for(int i=n;i>=1;i--)
+       {
+           for(int k=n;k>i;k--)
+           {
+               System.out.print(" ");
+           }
+           for(int j=1;j<=2*i-1;j++)
+           {
+               System.out.print("*");
+           }
+           System.out.println();
+       }
+    }
+}
+
+-------------------------------------------------------------------------------------------------
+pattern:
+    *
+   ***
+  *****
+ *******
+*********
+ *******
+  *****
+   ***
+    *
+=> just combine the above two codes but when combing the top row of down side will reduce just see it.
+
+code: 
+class Main
+{
+    public static void main(String args[])
+    {
+       int n=5;
+       for(int i=1;i<=n;i++)
+       {
+           for(int k=i;k<n;k++)
+           {
+               System.out.print(" ");
+           }
+           for(int j=1;j<=2*i-1;j++)
+           {
+               System.out.print("*");
+           }
+           System.out.println();
+       }
+       
+       for(int i=n-1;n>=1;i--)
+       {
+           for(int k=n;k>i;k--)
+           {
+               System.out.print(" ");
+           }
+           for(int j=1;j<=2*i-1;j++)
+           {
+               System.out.print("*");
+           }
+           System.out.println();
+       }
+    }
+}
+-------------------------------------------------------------------------------------
