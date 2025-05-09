@@ -1,0 +1,11 @@
+**** Arrays ***
+
+=> Array is a data Structure , that is used to store multiple data of same type in an contiguous memeory location is called Array.
+=> we cant store multiple type of data in a single array:
+      arr={10,'c',"Strin",10.2};
+=> we cant store only same type of data: {1,2,3,4,5} or {"deva","Mahesh","sunil"};
+
+=>all the Data of the array will store in Heap Memory.
+=> all the variables or refernce of that is stored in Stack Memory.
+
+=> Contiguous Memory means, if 1st element is stores in 100 then 2nd element in 104 and 3rd is 108 , because the size in int is 4.
