@@ -1,0 +1,43 @@
+*** Multi-Dimensional Arrays***
+
+=> Multidimensional arrays are used to store the data in rows and columns, where each row can represent another individual array are multidimensional array. 
+=> It is also known as array of arrays. 
+
+=> Two dimensional array:
+int[][]  arr2d = new int[3][5];
+
+=> Three dimensional array:
+int[][][] arr3d = new int[3][5][7];
+
+** 2-D arrays:
+Eg: Printing the values in 2-D Array.
+class Main {
+    public static void main(String[] args){
+
+        int[][] arr = { { 1, 2 }, { 3, 4 } };
+
+        for (int i = 0; i < 2; i++){
+            for (int j = 0; j < 2; j++)
+                System.out.print(arr[i][j]+" ");
+          	System.out.println();
+    	}
+    }
+}
+---------------------------------------------------------------------------------------------------------
+Eg:Accessnig the element at index: 
+
+import java.io.*;
+
+class Main {
+    public static void main(String[] args){
+
+        int[][] arr = { { 1, 2 }, 
+                       	{ 3, 4 } };
+     
+		System.out.println("a[1][1] : " + arr[1][1]);
+    }
+}
+------------------------------------------------------------------------------------------------------------
+*** Jagged Array ***
+=> Jagged Array is also array of arrays.
+=> but each row, contain different number of colums
