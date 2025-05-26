@@ -1,0 +1,32 @@
+*** Data Structure and Algorithm ***
+=> Data Structures are used to store the Data in efficient way.
+=> Algorithms make the operations faster.
+
+=> Data Structers are: 
+  *LinkedList
+  *Stack
+  *Queue
+  *Trees
+  *Graphs
+ etc..
+
+=> Algorithms: 
+ * sorthing algos.
+ * Searching algos.
+etc..
+____________________________________________________________________________________________________________________________________-
+*** Time and Space Complexity:
+*Ingnore Constants.
+*Ignore Small Values.
+*Focus on worst Case.
+
+Time Complexity:
+=> It is a way to describes how the time taken by an algorithm increases as the input size grows.
+
+Space Complexity:
+=>It is a way to describe how the amount of memory is taken by algorithm to run as the input size grows.
+
+______________________________________________________________________________________________________________________________________
+** Types of Data Structures:
+=> Linear: LinkedList,Stack,Queue.
+=> Non-Linear: Trees, Graphs,Heaps.
